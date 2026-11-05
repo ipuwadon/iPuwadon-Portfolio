@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-night-900 text-slate-300 antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 20% -10%, rgba(59, 130, 246, 0.13), transparent),
+      radial-gradient(ellipse 60% 40% at 90% 10%, rgba(139, 92, 246, 0.1), transparent);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-blue-500/30 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-blue-400 ring-offset-2 ring-offset-night-900;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  .glass-hover {
+    @apply transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.07] hover:shadow-glow-soft;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-sky-400 via-blue-400 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-sky-300;
+  }
+
+  .badge-purple {
+    @apply border-violet-400/20 bg-violet-500/10 text-violet-300;
+  }
+
+  .badge-green {
+    @apply border-emerald-400/20 bg-emerald-500/10 text-emerald-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:shadow-glow-blue;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-blue-400/40 hover:text-white;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold tracking-tight text-white sm:text-3xl;
+  }
+}

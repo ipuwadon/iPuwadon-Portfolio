@@ -1,4 +1,4 @@
-# --- Node / Next.js (frontend) ---
+# --- Node / Next.js ---
 node_modules/
 .next/
 out/
@@ -7,20 +7,6 @@ out/
 next-env.d.ts
 npm-debug.log*
 yarn-error.log*
-
-# --- Python (backend) ---
-.venv/
-venv/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# --- Local databases (dev data, never commit) ---
-*.db
-*.sqlite
-*.sqlite3
 
 # --- Environment files / credentials ---
 .env
@@ -40,5 +26,5 @@ Desktop.ini
 .idea/
 .vscode/
 
-# --- Personal documents (keep CV files out of the public repo) ---
+# --- Personal documents (source resume files; the published PDF lives in public/) ---
 *.docx
