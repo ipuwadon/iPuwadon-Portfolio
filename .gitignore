@@ -1,0 +1,44 @@
+# --- Node / Next.js (frontend) ---
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-error.log*
+
+# --- Python (backend) ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Local databases (dev data, never commit) ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Environment files / credentials ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Logs ---
+logs/
+*.log
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+
+# --- Personal documents (keep CV files out of the public repo) ---
+*.docx
